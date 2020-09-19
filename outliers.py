@@ -35,10 +35,11 @@ for i in range(times):
     #    print(str(i) + " is not an outlier.")
 
 # Printing out the outliers.
-if len(outliers) > 1:
-    print(str(outliers) + " are the outliers).")
-elif len(outliers) > 0:
-    print(str(outliers) + " is the outlier.")
-else:
-    print("There were no outliers to be found.")
-    
+for i in range(len(outliers)):
+    if len(outliers) > 1:
+        print(str(outliers[i]) + " are the outliers).")
+    elif len(outliers) > 0:
+        print(str(outliers[i]) + " is the outlier.")
+    else:
+        print("There were no outliers to be found.")
+   
