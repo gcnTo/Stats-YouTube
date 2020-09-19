@@ -28,7 +28,7 @@ outlier_range_upper = q3 + 1.5 * iqr
 
 outliers = []
 for i in range(times):
-    if num_list[i] < outlier_range_lower or i > outlier_range_upper:
+    if num_list[i] < outlier_range_lower or num_list[i] > outlier_range_upper:
         outliers.append(num_list[i])
         
     #else:
@@ -41,3 +41,4 @@ elif len(outliers) > 0:
     print(str(outliers) + " is the outlier.")
 else:
     print("There were no outliers to be found.")
+    
